@@ -61,10 +61,7 @@ function magico(array, n) {
 
     sumaDiag1 += array[i][i];
     sumaDiag2 += array[n - 1 - i][n - 1 - i];
-    
-    // console.log(i+","+i)
-    // console.log(array[i][i])
-    console.log(array[n - 1 - i][n - 1 - i])
+
   }
   
   if (sumaDiag1 != numMagico || sumaDiag2 != numMagico) {
