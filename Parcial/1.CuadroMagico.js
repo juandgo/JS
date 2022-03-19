@@ -1,35 +1,35 @@
-// var array = [[],[],[]]; 
+var array = [[],[],[]]; 
 
-// var nfilas = 3;
-// var nColums = 3;
-// for (var i = 0; i < nfilas; i++) {//filas 
-//   for (var j = 0; j < nColums; j++) {//columnas
-//     var num = prompt("["+i+","+j+"]"+'. Ingrese un numero:',"");
-//     array[i].push(parseInt(num))
-//     document.write(array[i][j])
-//     document.write("["+i+","+j+"]")
-//   }
-//   document.write("<br>");
-// }
-// // document.write(array)
-// alert(array);
-
-
-
-
-const array = [
-  [2, 7, 6],
-  [9, 5, 1],
-  [4, 3, 8],
-];
-
-for (var i = 0; i < 3; i++) {//filas 
-  for (var j = 0; j < 3; j++) {//columnas
+var nfilas = 3;
+var nColums = 3;
+for (var i = 0; i < nfilas; i++) {//filas 
+  for (var j = 0; j < nColums; j++) {//columnas
+    var num = prompt("["+i+","+j+"]"+'. Ingrese un numero:',"");
+    array[i].push(parseInt(num))
     document.write(array[i][j])
     document.write("["+i+","+j+"]")
   }
   document.write("<br>");
 }
+// document.write(array)
+alert(array);
+
+
+
+
+// const array = [
+//   [2, 7, 6],
+//   [9, 5, 1],
+//   [4, 3, 8],
+// ];
+
+// for (var i = 0; i < 3; i++) {//filas 
+//   for (var j = 0; j < 3; j++) {//columnas
+//     document.write(array[i][j])
+//     document.write("["+i+","+j+"]")
+//   }
+//   document.write("<br>");
+// }
 
 
 
@@ -61,7 +61,6 @@ function magico(array, n) {
 
     sumaDiag1 += array[i][i];
     sumaDiag2 += array[n - 1 - i][n - 1 - i];
-
   }
   
   if (sumaDiag1 != numMagico || sumaDiag2 != numMagico) {

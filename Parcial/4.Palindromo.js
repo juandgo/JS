@@ -1,9 +1,9 @@
 // 4  Indentificar palindromo
 
-verificar = prompt("Ingrese la paralabar para saber si es palindromo")
+var v = prompt("Ingrese la palabra para saber si es palindromo")
 function revisarPalindromo(str) {
-    const strAlrevez = str.split("").reverse().join("");
-  
-    return strAlrevez === str ? "Es palindromo" : "No es palindromo";
+    const strAlrevez = str.split("").reverse().join("");//divide en caracteres e invierte el orden de fin a inicio y luego los une.
+//    document.write(strAlrevez)
+    return strAlrevez === str ? "Es palindromo" : "No es palindromo";//Compara la palabra alrrevez con el la palabra original.
 }
-alert(revisarPalindromo(verificar));
+alert(revisarPalindromo(v));

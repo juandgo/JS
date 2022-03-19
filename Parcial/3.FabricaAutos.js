@@ -20,7 +20,7 @@ document.write("Material: "+costoUnidad[0]*7+"<br>Personal: "+costoUnidad[1]*7+"
 
 // =========================
 
-var array = [[7,5,5],
+var array = [[7,8,5],
             [10,9,7],
             [5,3,2],
             [2,3,1]];
