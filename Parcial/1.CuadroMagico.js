@@ -54,8 +54,8 @@ function magico(array, n) {
     }
 
     if (sumaFila != numMagico || sumaCol != numMagico) {
-      console.log("nO es un cuadrado magico");
-      document.write("nO es un cuadrado magico");
+      console.log("No es un cuadrado magico");
+      document.write("No es un cuadrado magico");
       return false;
     }
 
@@ -64,7 +64,7 @@ function magico(array, n) {
   }
   
   if (sumaDiag1 != numMagico || sumaDiag2 != numMagico) {
-    console.log("nO es un cuadrado magico");
+    console.log("No es un cuadrado magico");
     document("nO es un cuadrado magico");
     return false;
   }

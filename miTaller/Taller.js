@@ -180,14 +180,9 @@ function distanciaAB(y1, x1, y2, x2) {
   var R = 6378.137; //Radio de la tierra en km
   var dLat = rad(y2 - y1);
   var dLong = rad(x2 - x1);
-  var a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(rad(y1)) *
-    Math.cos(rad(y2)) *
-    Math.sin(dLong / 2) *
-    Math.sin(dLong / 2);
+  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(rad(y1)) * Math.cos(rad(y2)) * Math.sin(dLong / 2) * Math.sin(dLong / 2);
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  //aquí obtienes la distancia en metros por la conversion 1Km =1000m
+  //Aquí obtienes la distancia en metros por la conversion 1Km =1000m
   var d = R * c * 1000;
   return d;
 }
