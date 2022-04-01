@@ -18,10 +18,10 @@ class Persona
     }
 
     set setNombre(nombre) {
-    this.#strNombre = nombre;
+        this.#strNombre = nombre;
     }
     set setEdad(edad) {
-    this.#strEdad  = edad;
+        this.#strEdad  = edad;
     }
     
     set setSexo(sexo) {
@@ -36,8 +36,8 @@ class Persona
         this.#doublePeso = peso;
     }
 
-    calcularIMC(p, a){
-        var imc = p/Math.pow(a,2); 
+    calcularIMC(){
+        var imc = this.#doublePeso/Math.pow(this.#doubleAltura,2); 
         var respuesta = "";
         if (imc > 25 && imc <30) {
             respuesta = "Su peso es de "+imc+" asi que usted tiene sobrepeso";
@@ -54,31 +54,32 @@ class Persona
         return mensaje;
     }
 
-    comprobarSexo(charSexo){
-        if(charSexo !== "h" && charSexo !== "m"){
-
+    comprobarSexo(sexo){
+        var sexo = this.#charSexo;
+        if(sexo == 'h' || sexo == 'm'){
+            return "Sexo "+sexo;
         }
     }
 
     generaDNI(){
-        var min = 1, max = 20;
-        var dni = Math.random() * (max - min) + min;
-        console.log(dni);
+        var min = 100000000, max = 200000000;
+        var dni = Math.floor((Math.random() * (max - min + 1)) + min);
         return dni;
     }
 
     toString(){
-        var mensaje = "Su nombre es "+this.#strNombre+"\nEdad: "+this.#strEdad+"\nDni "+this.#intDni+"\nSexo "+persona1.comprobarSexo;
+        var mensaje = "Su nombre es "+this.#strNombre+"\nEdad: "+this.#strEdad+"\nDni "+dni+"\nSexo "+this.#charSexo+"\nPeso "+this.#doublePeso+"\nAltura "+this.#doubleAltura;
         return mensaje;
     }
 }
 
-dni = 0;
-var persona1 = new Persona("Juan", "24", dni,'h', peso , altura)
-var altura = persona1.setAltura(1.70) ;
-var peso = persona1.setPeso(75.2);
-var dni = persona1.generaDNI();
+dni;
+var persona1 = new Persona("Juan", "24", dni,'h', 70, 1.70)
+var imc = persona1.calcularIMC()
+var me =persona1.esMayorDeEdad()
+var cs =persona1.comprobarSexo()
+var dni = persona1.generaDNI()
 // console.log(persona1.toSource());
 
 console.log(persona1.toString());
-
+console.log(imc+"\n"+me+"\n"+cs)
