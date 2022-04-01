@@ -60,6 +60,7 @@ class CuentaAhorro  {
         return mensaje;
     }
   }
+  
   var cantidad = 7;
   var cuenta = new CuentaAhorro("Armando",cantidad);
   var adiccion = 11;
